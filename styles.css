@@ -1,11 +1,8 @@
-/* colors - see style guide for docs. 
-Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
-
 :root {
   --color1: #001219;
   --color2: #005f73;
   --color3: #3d9397;
-  --color4: #94d28d;
+  --color4: #e8d8a6;
   --color5: #e9d8a6;
   --color6: #ee9800;
   --color7: #ca6702;
@@ -43,11 +40,6 @@ section {
 section h2 {
   font-size: 2.5rem;
 }
-
-
-/*****************
-New styles begin here and continue to the end of the page 
-****************/
 
 section ul {
   list-style-type: none;
@@ -141,20 +133,97 @@ figcaption a {
 }
 
 
+/* mission styles */
+
+#mission {
+  margin-bottom: 3rem;
+}
+
+.missiontext {
+  display: block;
+  line-height: 1.7rem;
+}
+
+.missionimg {
+  max-height: 100px;
+  display: block;
+}
+
+/* Footer Styles */
+.footer {
+  padding: 0;
+  margin: 0;
+  background-color:  #e8d8a6;
+}
+
+footer {
+  padding: 3rem;
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer p{
+  margin-top: 0px;
+}
+
+footer ul {
+ list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-right: 1rem;
+}
+
+footer address {
+  font-size: normal;
+  margin-top: 2rem;
+  font-weight: bold; 
+  font-style: normal;
+}
+
+.social-1,
+address {
+  padding-bottom: 5px;
+}
+
+
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
-  section ul {
+  section ul,
+  footer {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
   }
-  section li {
+  section li,
+  .social,
+  address {
       flex-basis: 49.5%;
   }
   /* turn off object position, inherit object-fit: cover */
   figure img {
       object-position: 0;
+  }
+
+  .missiontext {
+    display: flow-root;
+    max-width: 900px;
+  }
+
+  .missionimg {
+    float: left;
+    shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
+    max-height: 211px;
+  }
+   footer address{
+    margin-top: 0;
   }
 }
 
@@ -162,7 +231,11 @@ figcaption a {
   section h2 {
       margin-left: 100px;
   }
-  section li {
+  section li,
+  .social {
       flex-basis: 32.5%;
+  }
+  address {
+    flex-basis: 65.5%;
   }
 }
