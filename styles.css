@@ -1,0 +1,134 @@
+* {
+ box-sizing: border-box;
+}
+
+*, *::before *::after {
+ box-sizing: inherit;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dbe5de;
+  padding: 0;
+  margin: 0;
+}
+
+
+section {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1rem;
+}
+
+section h2 {
+ font-size: 2.5rem;
+}
+
+section ul {
+ list-style-type: none;
+ padding: 0px;
+ margin: 0px;
+}
+
+figure {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+  border-width: 10px;
+  border-radius: 5px;
+  border-style: solid;
+}
+
+figure img {
+  margin-bottom: -4px;
+  width: 100%;
+  object-fit: cover; 
+  object-position: 0 -150px;
+}
+
+figcaption {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  font-size: 1.875rem;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+figcaption a {
+  display: block;
+  font-size: 30px;
+  padding: 16px;
+  text-decoration: none;
+  color: black;
+}
+
+
+.image1-abs,
+.image1-abs a:hover {
+  background-color: #005f73;
+  color: #005f73;
+}
+
+.image2-land,
+.image2-land a:hover {
+ background-color: #3d9397; 
+ color: #3d9397;
+}
+
+.image3-music,
+.image3-music a:hover {
+ background-color: #bb3e03; 
+ color: #bb3e03;
+}
+
+
+.image4-pop,
+.image4-pop a:hover {
+ background-color: #ca6702; 
+ color: #ca6702;
+}
+
+.image5-vehi,
+.image5-vehi a:hover {
+ background-color: #94d28d; 
+ color: #94d28d;
+}
+
+.image6-vivid,
+.image6-vivid a:hover {
+ background-color: #ee9800; 
+ color: #ee9800;
+}
+
+@media (min-width: 550px) {
+  #selections ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  section li {
+   flex-basis: 49.5%;
+  }
+
+  figure img {
+    object-position: 1;
+  }
+  
+}
+
+@media (min-width: 800px) {
+
+ section h2{
+  margin-left: 100px;
+ } 
+
+ section li {
+   flex-basis: 32.5%;
+ }
+}
